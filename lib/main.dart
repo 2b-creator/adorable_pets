@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import 'home.dart';
+import 'user_sign_interface.dart';
+import 'star_page.dart';
+import 'settings.dart';
 
 void main() {
   runApp(
@@ -25,6 +29,12 @@ class TutorialHome extends StatefulWidget {
 class _MyHomePageState extends State<TutorialHome> {
   final double buttonPadding = 12;
   int currentPageIndex = 0;
+
+  WidgetHome widgetHome = new WidgetHome();
+  StarPage starPage = new StarPage();
+  WidgetSignPage signPage = new WidgetSignPage();
+  WidgetSettingsPage settingsPage = new WidgetSettingsPage();
+
 
   void _testEvent() {
     setState(() {
@@ -68,35 +78,7 @@ class _MyHomePageState extends State<TutorialHome> {
           });
         },
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.all(buttonPadding),
-              child: TextButton(
-                onPressed: _testEvent,
-                child: Text(
-                  "登录",
-                  style: GoogleFonts.notoSansSc(
-                      textStyle: const TextStyle(fontSize: 20)),
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(buttonPadding),
-              child: TextButton(
-                onPressed: _testEvent,
-                child: Text(
-                  "注册",
-                  style: GoogleFonts.notoSansSc(
-                      textStyle: const TextStyle(fontSize: 20)),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+      body: <Widget>[widgetHome, starPage, signPage, settingsPage][currentPageIndex],
     );
   }
 }

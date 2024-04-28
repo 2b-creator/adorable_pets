@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class WidgetHome extends StatelessWidget {
+class WidgetHome extends StatefulWidget {
+  
+  @override
+  State<WidgetHome> createState() => _WidgethHomeState();
+}
+
+class _WidgethHomeState extends State<WidgetHome> {
   final double buttonPadding = 12;
 
   void _testEvent() {
@@ -10,37 +16,9 @@ class WidgetHome extends StatelessWidget {
   }
   //const WidgetHome({super.key});
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.all(buttonPadding),
-              child: TextButton(
-                onPressed: _testEvent,
-                child: Text(
-                  "登录",
-                  style: GoogleFonts.notoSansSc(
-                      textStyle: const TextStyle(fontSize: 20)),
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(buttonPadding),
-              child: TextButton(
-                onPressed: _testEvent,
-                child: Text(
-                  "注册",
-                  style: GoogleFonts.notoSansSc(
-                      textStyle: const TextStyle(fontSize: 20)),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+  Widget build(BuildContext context){
+    return const DecoratedBox(
+      decoration: BoxDecoration(),
     );
   }
 }
