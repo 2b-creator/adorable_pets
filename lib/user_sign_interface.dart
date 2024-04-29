@@ -65,18 +65,27 @@ class _RegisterWidget extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Registration"),
-        leading: BackButton(onPressed: () {
-          Navigator.pop(context);
-        },)
-      ),
+          title: const Text("Registration"),
+          leading: BackButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          )),
       body: DecoratedBox(
-        decoration: const BoxDecoration(),
-        child: Padding(
-          padding: EdgeInsets.all(textPadding),
-          child: const Text("Username"),
-        ),
-      ),
+          decoration: const BoxDecoration(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.all(textPadding),
+                child: const Text("Username"),
+              ),
+              Padding(
+                padding: EdgeInsets.all(textPadding),
+                child: const Text("Username"),
+              ),
+            ],
+          )),
     );
   }
 }
