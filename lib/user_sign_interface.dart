@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WidgetSignPage extends StatefulWidget {
+  const WidgetSignPage({super.key});
+
   @override
   State<WidgetSignPage> createState() => _WidgethHomeState();
 }
@@ -13,7 +13,7 @@ class _WidgethHomeState extends State<WidgetSignPage> {
 
   void _navReg() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => RegisterPage()));
+        context, MaterialPageRoute(builder: (context) => const RegisterPage()));
   }
 
   //const WidgetHome({super.key});
@@ -55,6 +55,8 @@ class _WidgethHomeState extends State<WidgetSignPage> {
 }
 
 class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
+
   @override
   State<RegisterPage> createState() => _RegisterWidget();
 }

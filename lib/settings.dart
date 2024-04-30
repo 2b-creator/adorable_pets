@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class WidgetSettingsPage extends StatefulWidget {
+  const WidgetSettingsPage({super.key});
+
   @override
   State<WidgetSettingsPage> createState() => _WidgetSettingState();
 }

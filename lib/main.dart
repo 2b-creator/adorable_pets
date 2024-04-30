@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'home.dart';
 import 'user_sign_interface.dart';
@@ -30,10 +28,10 @@ class _MyHomePageState extends State<TutorialHome> {
   final double buttonPadding = 12;
   int currentPageIndex = 0;
 
-  WidgetHome widgetHome = new WidgetHome();
-  StarPage starPage = new StarPage();
-  WidgetSignPage signPage = new WidgetSignPage();
-  WidgetSettingsPage settingsPage = new WidgetSettingsPage();
+  WidgetHome widgetHome = const WidgetHome();
+  StarPage starPage = const StarPage();
+  WidgetSignPage signPage = const WidgetSignPage();
+  WidgetSettingsPage settingsPage = const WidgetSettingsPage();
 
 
   void _testEvent() {
