@@ -33,13 +33,6 @@ class _MyHomePageState extends State<TutorialHome> {
   WidgetSignPage signPage = const WidgetSignPage();
   WidgetSettingsPage settingsPage = const WidgetSettingsPage();
 
-
-  void _testEvent() {
-    setState(() {
-      //do sth
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     // Scaffold is a layout for
