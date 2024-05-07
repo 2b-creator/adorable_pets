@@ -44,7 +44,7 @@ class _MyHomePageState extends State<TutorialHome> {
           tooltip: 'Navigation menu',
           onPressed: null,
         ),
-        title: const Text('Example title'),
+        title: const Text('Adorable Pets'),
         actions: const [
           IconButton(
             icon: Icon(Icons.search),
